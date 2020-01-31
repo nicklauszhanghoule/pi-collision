@@ -9,19 +9,19 @@ class block{
     this.collisions = 0;
   }
   drawBlockOne(ctx){
-    ctx.fillStyle = '#1864ab';
+    ctx.fillStyle = "#1864ab";
     ctx.fillRect(this.x, this.y, this.size, this.size);
     ctx.textAlign = "center";
     ctx.font = "18px Open Sans";
-    ctx.fillStyle = '#f8f9fa';
+    ctx.fillStyle = "#f8f9fa";
     ctx.fillText(this.mass, this.x + this.size/2, 180);
   }
   drawBlockTwo(ctx){
-    ctx.fillStyle = '#5f3dc4';
+    ctx.fillStyle = "#5f3dc4";
     ctx.fillRect(this.x, this.y, this.size, this.size);
     ctx.textAlign = "center";
     ctx.font = "18px Open Sans";
-    ctx.fillStyle = '#f8f9fa';
+    ctx.fillStyle = "#f8f9fa";
     ctx.fillText(this.mass, this.x + this.size/2, 180);
   }
   update(){

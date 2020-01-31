@@ -22,9 +22,16 @@ let b2 = new block(canvas, 600, (canvas.height -20) - s2 + 50, 100, m2, v);
 
 function drawCollision() {
   ctx.font = "20px Calibri";
-  ctx.fillStyle = '#000000';
+  ctx.fillStyle = "#000000";
   ctx.textAlign = "left";
   ctx.fillText("Collisions: " + b1.collisions, 20, 30);
+}
+
+function update() {
+  let s1 = 70 + (Math.log(m1)*3);
+  let s2 = 70 + (Math.log(m2)*3);
+  b1 = new block(canvas, 300, (canvas.height -20) - s1 + 50, 100, m1, 0);
+  b2 = new block(canvas, 600, (canvas.height -20) - s2 + 50, 100, m2, v);
 }
 
 function draw(){

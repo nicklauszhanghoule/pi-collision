@@ -7,6 +7,13 @@
     <body>
         <canvas id = "canvas" height = "200"></canvas>
         <script src = "index.js"></script>
-        <!--Add inputs-->
+        <input id = "mass1input" type = "number" min = "1" step = "1" value = "1" onkeyup="if(isNaN(parseInt(event.target.value)) || parseInt(event.target.value)==0) {
+        } else {
+          m1 = parseInt(event.target.value);update();
+        }">
+        <input id = "mass2input" type = "number" min = "1" step = "1" value = "100" onkeyup="if(isNaN(parseInt(event.target.value)) || parseInt(event.target.value)==0) {
+        } else {
+          m2 = parseInt(event.target.value);update();
+        }">
     </body>
 </html>
