@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+html {
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+canvas {
+    border-style: hidden hidden solid dashed;
+    border-bottom-left-radius: 0;
+}
+
+#mass1input {
+    text-align: left;
+    border-radius: 25px;
+    border: 2px solid #1864ab;
+    padding: 20px;
+    width: 150px;
+    height: 1px;
+}
+
+#mass2input {
+    text-align: left;
+    border-radius: 25px;
+    border: 2px solid #5f3dc4;
+    padding: 20px;
+    width: 150px;
+    height: 1px;
+}
+
+#mass1text {
+    font-family: Open Sans;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: bottom;
+    color: #1864ab;
+}
+
+#mass2text {
+    font-family: Open Sans;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: bottom;
+    color: #5f3dc4;
+}
