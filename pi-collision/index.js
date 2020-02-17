@@ -3,7 +3,7 @@ canvas.width = window.innerWidth - 20;
 let ctx = canvas.getContext("2d");
 
 let time = 0;
-setInterval(function(){
+setInterval(function() {
   time++;
 }, 1000);
 

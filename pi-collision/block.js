@@ -1,5 +1,5 @@
-class block{
-  constructor(canvas, x, y, size, mass, v){
+class block {
+  constructor(canvas, x, y, size, mass, v) {
     this.x = x;
     this.y = y;
     this.v = v;
@@ -8,33 +8,33 @@ class block{
     this.canvas = canvas;
     this.collisions = 0;
   }
-  drawBlockOne(ctx){
+  drawBlockOne(ctx) {
     ctx.fillStyle = "#1864ab";
     ctx.fillRect(this.x, this.y, this.size, this.size);
     ctx.textAlign = "center";
     ctx.font = "18px Open Sans";
     ctx.fillStyle = "#f8f9fa";
-    ctx.fillText(this.mass, this.x + this.size/2, 180);
+    ctx.fillText(this.mass, this.x + this.size / 2, 180);
   }
-  drawBlockTwo(ctx){
+  drawBlockTwo(ctx) {
     ctx.fillStyle = "#5f3dc4";
     ctx.fillRect(this.x, this.y, this.size, this.size);
     ctx.textAlign = "center";
     ctx.font = "18px Open Sans";
     ctx.fillStyle = "#f8f9fa";
-    ctx.fillText(this.mass, this.x + this.size/2, 180);
+    ctx.fillText(this.mass, this.x + this.size / 2, 180);
   }
-  update(){
+  update() {
     this.x += this.v;
   }
-  reverse(){
-    if(this.x < 0){
+  reverse() {
+    if (this.x < 0) {
       this.v *= -1;
       this.collisions++;
     }
   }
-  collide(other){
-    if(this.x + this.size > other.x) {
+  collide(other) {
+    if (this.x + this.size > other.x) {
       let v1 = this.bounce(other);
       let v2 = other.bounce(this);
       b1.v = v1;
@@ -42,9 +42,9 @@ class block{
       this.collisions++;
     }
   }
-  bounce(other){
+  bounce(other) {
     let totalMass = this.mass + other.mass;
-    let v = (((this.mass - other.mass) / totalMass) * this.v) + (((2 * other.mass) / totalMass) * other.v);
+    let v = ((this.mass - other.mass) / totalMass) * this.v + ((2 * other.mass) / totalMass) * other.v;
     return v;
   }
 }
