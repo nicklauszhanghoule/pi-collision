@@ -111,8 +111,6 @@ Block["__class"] = "Block";
 Main.main(null);
 }
 
-//m1 = x m2 = y
-//reset graphs
 getData();
 
 function update() {
