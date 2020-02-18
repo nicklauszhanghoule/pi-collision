@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div align="center">
+            <input id="mass1input" type="number" min="1" step="1" value="1" onkeyup="if(isNaN(parseInt(event.target.value)) || parseInt(event.target.value)==0) {
+                  } else {
+                    m1 = parseInt(event.target.value);update();
+                  }">
+            <input id="mass2input" type="number" min="1" step="1" value="100" onkeyup="if(isNaN(parseInt(event.target.value)) || parseInt(event.target.value)==0) {
+                  } else {
+                    m2 = parseInt(event.target.value);update();
+                  }">
+        </div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <div id="graph" style="width:1500px;height:650px;"></div>
+            <script src="graph.js"></script>
+        </div>
+    </body>
+</html>
